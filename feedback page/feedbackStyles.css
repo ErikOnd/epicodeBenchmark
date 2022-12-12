@@ -15,6 +15,7 @@ body {
 .header {
   position: absolute;
 }
+
 h1 {
   font-family: "Outfit", sans-serif;
   font-size: 50px;
@@ -81,4 +82,46 @@ input[type="text"] {
   box-shadow: 0 0 30px -2px #00ffff;
   border: 0.5px solid #53c6c6;
   cursor: pointer;
+}
+
+.rate {
+  margin-right: 225px;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.rate:not(:checked)>input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate:not(:checked)>label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 55px;
+  color: #0b113a;
+}
+
+.rate:not(:checked)>label:before {
+  content: '★ ';
+}
+
+.rate>input:checked~label {
+  color: #00ffff;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+  color: #00ffff;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+  color: #00ffff;
 }
