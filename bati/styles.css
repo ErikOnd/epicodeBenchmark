@@ -84,6 +84,9 @@ ul {
     cursor: pointer;
 }
 
+#promise-text {
+    display: inline;
+}
 
 #proceed-button {
     width: 200px;
@@ -94,7 +97,7 @@ ul {
     border-radius: 0;
     background-color: rgb(194, 18, 141);
     border-style: none;
-    transition: 500ms;
+    transition: all 350ms linear;
     margin-left: 220px;
     cursor: pointer;
 }
