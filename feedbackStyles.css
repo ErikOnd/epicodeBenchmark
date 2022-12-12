@@ -1,0 +1,84 @@
+body {
+  margin: 0 auto;
+  background-color: #0e0e0e;
+}
+
+#outer-container {
+  position: relative;
+  margin-top: 140px;
+  margin-inline: auto;
+  height: 768px;
+  width: 1024px;
+  background-image: url("/assets/bg.jpg");
+}
+
+.header {
+  position: absolute;
+}
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 50px;
+  margin-bottom: 0px;
+}
+
+#rating-container {
+  text-align: center;
+  color: white;
+}
+
+#comment-container {
+  text-align: center;
+}
+
+img {
+  height: 40px;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 25px;
+}
+
+.info {
+  margin-top: 8px;
+}
+
+#comment-container {
+  margin-top: 40px;
+  padding-top: 40px;
+}
+
+#ratingStar {
+  margin-inline: auto;
+  background-color: aqua;
+  width: 685px;
+  height: 72px;
+  color: #0e0e0e;
+}
+
+input[type="text"] {
+  font-family: "Inter", sans-serif;
+  width: 680px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #d20094;
+}
+
+#more-info-btn {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  height: 60px;
+  width: 215px;
+  background-color: #00ffff;
+  box-shadow: 0 0 30px -2px #00ffff;
+  border: 0.5px solid #53c6c6;
+  cursor: pointer;
+}
