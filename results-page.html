@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./results-page.css" />
+    <title>Results</title>
+  </head>
+  <body>
+    <div class="main-layout container">
+      <nav id="main-header" class="navbar">
+        <img class="logo" src="./assets/epicode_logo.png" alt="epicode-logo" />
+      </nav>
+      <div class="main">
+        <div class="result-wrapper">
+          <h2 class="heading-2 text-center">Results</h2>
+          <h3 class="heading-3">The summary of your answers:</h3>
+          <div class="graph-wrapper">
+            <div>
+              <div>
+                <h2 class="corr-wrong-heading">Correct</h2>
+                <h2 class="per-heading">75.86<span></span>%</h2>
+                <p class="sub-text">22/29 questions</p>
+              </div>
+            </div>
+            <div class="canvas-block">
+              <div class="pie animate no-round">
+                <div class="about-result-info">
+                  <span class="cong-heading">Congratulations!</span>
+                  <span class="highlight-color">you passed the exam. </span>
+                  <span class="sub-info-text"
+                    >We will send you the certificate in few minutes.</span
+                  >
+                  <span class="sub-info-text"
+                    >Check your e-mail(including promotions / spam folder)</span
+                  >
+                </div>
+              </div>
+              <!-- <canvas role="img" width="450px" height="450px"></canvas> -->
+            </div>
+            <div class="text-align-right">
+              <h2 class="corr-wrong-heading">Wrong</h2>
+              <h2 class="per-heading">24.14<span></span>%</h2>
+              <p class="sub-text">7/29 questions</p>
+            </div>
+          </div>
+        </div>
+        <button class="rate-btn" type="button" title="Rate us">Rate us</button>
+      </div>
+    </div>
+    <script src="./results.js"></script>
+  </body>
+</html>
