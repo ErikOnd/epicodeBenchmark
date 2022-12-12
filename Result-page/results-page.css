@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   /* font-family: "Outfit", sans-serif; */
-  background-image: url(./assets/bg.jpg);
+  background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
@@ -129,6 +129,7 @@ body {
   line-height: 22px;
   padding: 20px 10px;
   margin-top: 50px;
+  margin-bottom: 50px;
   vertical-align: middle;
   width: 230px;
   transition: all 0.4s linear;
