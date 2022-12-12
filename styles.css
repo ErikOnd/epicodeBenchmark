@@ -1,0 +1,35 @@
+body{
+    margin: 0 auto;
+    background-color:#0e0e0e;
+}
+
+#outer-container{
+    position: relative;
+    margin-top: 140px;
+    margin-inline: auto;
+    height: 768px;
+    width: 1024px;
+    background-image: url('/assets/bg.jpg');
+  
+}
+
+.header img{
+    position: absolute;
+
+}
+
+#rating-container{
+    text-align: center;
+    color: white;
+}
+
+#comment-container{
+    text-align: center;
+}
+
+img{
+    height: 40px;    
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
