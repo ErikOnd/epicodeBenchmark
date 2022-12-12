@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
-
-  background-image: url(/assets/bg.jpg);
+  background-color: #0e0e0e;
+  background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
@@ -9,7 +9,8 @@ body {
 }
 
 #outer-container {
-  margin-top: 50px;
+  position: relative;
+  margin-inline: auto;
 }
 
 .header {
@@ -22,6 +23,7 @@ h1 {
 }
 
 #rating-container {
+  margin-top: 170px;
   text-align: center;
   color: white;
 }
@@ -81,10 +83,52 @@ input[type="text"] {
   width: 215px;
   background-color: #00ffff;
   cursor: pointer;
-  transition: all 350ms linear;
+  transition: all 350ms;
 }
 
 #more-info-btn:hover {
   box-shadow: 0 0 30px -2px #00ffff;
   border: 0.5px solid #53c6c6;
+}
+
+.rate {
+  margin-right: 780px;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 55px;
+  color: #0b113a;
+}
+
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+
+.rate > input:checked ~ label {
+  color: #00ffff;
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #00ffff;
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #00ffff;
 }
