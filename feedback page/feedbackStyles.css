@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
   background-color: #0e0e0e;
-  background-image: url(../assets/bg.jpg);
+  background-image: url("../assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
