@@ -3,14 +3,8 @@ const questions = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "Which of the following syntax is correct to refer an external script called “formValidation.js”?",
-    options: [
-      "<script src = “formValidation.js”>",
-      "<script name = “formValidation.js”>",
-      "<script href = “formValidation.js”>",
-      "<script source = “formValidation.js”>",
-    ],
+    question: "The external JavaScript file must contain the <script> tag.",
+    options: ["false", "true"],
     correct_answer: 0,
   },
   {
