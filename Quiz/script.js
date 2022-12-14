@@ -194,6 +194,8 @@ function nextQnA() {
     };
   }
 
+  localStorage.setItem('userscore', userScore)
+
   storeAnswers()
   deleteQnA()
   displayQnA()
