@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  /* font-family: "Outfit", sans-serif; */
+  background-image: url(../assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: 50%;
+}
+.main-layout {
+  color: white;
+  font-size: 1.15em;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+.container {
+  max-width: 1320px;
+  padding-inline: 12px;
+  width: 100%;
+  margin-inline: auto;
+}
+.navbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  height: 40px;
+  vertical-align: middle;
+}
+.timer {
+  width: 100px;
+  height: 100px;
+  /* background-color: blue; */
+  margin-top: 50px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+#question-text {
+  font-family: "Outfit", sans-serif;
+  font-size: 50px;
+  line-height: 55px;
+  width: 60%;
+  margin-inline: auto;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.option-container {
+  margin-top: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.option {
+  width: 46%;
+  max-width: 100%;
+  height: 60px;
+  margin-inline: 1em;
+  margin-bottom: 2em;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.35s linear;
+  cursor: pointer;
+}
+.btn-gradient {
+  /* background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      )
+      padding-box,
+    linear-gradient(to right, white, rgba(255, 255, 255, 0.5)) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent; */
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
+}
+
+/* .option:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(210, 0, 148, 100%) 0%,
+    rgba(144, 0, 128, 100%) 100%
+  );
+} */
+.next-question-btn {
+  text-align: right;
+  margin-right: 1em;
+}
+.question-number {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+}
+.correct {
+  background: linear-gradient(
+    180deg,
+    rgba(210, 0, 148, 100%) 0%,
+    rgba(144, 0, 128, 100%) 100%
+  );
+}
+.wrong {
+  background-color: red;
+}
+.select {
+  background: linear-gradient(
+    180deg,
+    rgba(210, 0, 148, 100%) 0%,
+    rgba(144, 0, 128, 100%) 100%
+  );
+}
+.already-answered {
+  pointer-events: none;
+}
+/* Sets the containers height and width */
+.base-timer {
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+/* Removes SVG styling that would hide the time label */
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: #00ffff;
+}
