@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
   background-color: #0e0e0e;
-  background-image: url(../assets/bg.jpg);
+  background-image: url("../assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
@@ -75,7 +75,8 @@ input[type="text"] {
   color: #d20094;
 }
 
-#more-info-btn {
+#more-info-btn,
+#more-info-btn2 {
   font-family: "Outfit", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -93,7 +94,6 @@ input[type="text"] {
 }
 
 .rate {
-  display: block;
   margin-right: 670px;
   height: 46px;
   padding: 0 10px;
