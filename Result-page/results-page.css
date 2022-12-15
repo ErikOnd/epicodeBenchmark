@@ -155,7 +155,7 @@ img {
   margin-left: 2em;
   border: none;
   text-align: center;
-  background-color: #c2128d;
+  background-color: #00ffff;
   color: #0b113c;
   text-transform: uppercase;
   font-size: 22px;
@@ -204,20 +204,26 @@ img {
 
 .pie:before {
   inset: 0;
-  background: radial-gradient(farthest-side, var(--c) 98%, #00ffff) top/var(--b) var(--b) no-repeat,
+  background: radial-gradient(farthest-side, var(--c) 98%, #00ffff) top/var(--b)
+      var(--b) no-repeat,
     conic-gradient(var(--c) calc(var(--p) * 1%), #9d1d8f 0);
-  -webkit-mask: radial-gradient(farthest-side,
-      #0000 calc(99% - var(--b)),
-      #000 calc(100% - var(--b)));
-  mask: radial-gradient(farthest-side,
-      #0000 calc(99% - var(--b)),
-      #000 calc(100% - var(--b)));
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
 }
 
 .pie:after {
   inset: calc(50% - var(--b) / 2);
   background: var(--c);
-  transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w) / 2));
+  transform: rotate(calc(var(--p) * 3.6deg))
+    translateY(calc(50% - var(--w) / 2));
 }
 
 .animate {

@@ -18,6 +18,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
+  height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -33,10 +34,14 @@ body::-webkit-scrollbar {
 
 #epicode-upper-logo-container {
   padding-top: 3em;
+  height: 10%;
 }
 
 img {
   height: 40px;
+}
+#main-background {
+  height: 100%;
 }
 
 .timer-position {
@@ -53,6 +58,7 @@ img {
 }
 
 .bottom-content {
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -68,13 +74,19 @@ img {
   font-weight: 500;
   margin-bottom: 0.5em;
 }
-
+#bottom-part {
+  width: 100%;
+}
+#bottom-part > p {
+  text-align: center;
+}
 .next-button {
-  margin-left: 800;
-  margin-top: 2em;
+  position: absolute;
+  right: 0;
+  margin-right: 4em;
   border: none;
   text-align: center;
-  background-color: #c2128d;
+  background-color: #00ffff;
   color: #0b113c;
   text-transform: uppercase;
   font-size: 22px;
@@ -114,18 +126,22 @@ img {
   margin-bottom: 10px;
   margin-left: 15px;
   background-color: rgb(255 255 255/0.95);
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   backdrop-filter: blur(8px);
   box-shadow: 3px 4px 2px rgba(255, 255, 255, 0.6) inset;
   cursor: pointer;
 }
 
 .selected {
-  background: linear-gradient(180deg,
-      rgba(210, 0, 148, 100%) 0%,
-      rgba(144, 0, 128, 100%) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(210, 0, 148, 100%) 0%,
+    rgba(144, 0, 128, 100%) 100%
+  );
 }
 
 .disappear {

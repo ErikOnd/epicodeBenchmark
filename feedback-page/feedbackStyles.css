@@ -114,7 +114,7 @@ input[type="text"] {
   margin-top: 2em;
   border: none;
   text-align: center;
-  background-color: #c2128d;
+  background-color: #00ffff;
   color: #0b113c;
   text-transform: uppercase;
   font-size: 22px;
@@ -139,12 +139,12 @@ input[type="text"] {
   box-shadow: -1px 1px 50px rgba(0, 255, 255, 0.8);
 }
 
-.rate:not(:checked)>input {
+.rate:not(:checked) > input {
   position: absolute;
   top: -9999px;
 }
 
-.rate:not(:checked)>label {
+.rate:not(:checked) > label {
   float: right;
   width: 1em;
   overflow: hidden;
@@ -154,23 +154,23 @@ input[type="text"] {
   color: #0b113a;
 }
 
-.rate:not(:checked)>label:before {
+.rate:not(:checked) > label:before {
   content: "★ ";
 }
 
-.rate>input:checked~label {
+.rate > input:checked ~ label {
   color: #00ffff;
 }
 
-.rate:not(:checked)>label:hover,
-.rate:not(:checked)>label:hover~label {
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
   color: #00ffff;
 }
 
-.rate>input:checked+label:hover,
-.rate>input:checked+label:hover~label,
-.rate>input:checked~label:hover,
-.rate>input:checked~label:hover~label,
-.rate>label:hover~input:checked~label {
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
   color: #00ffff;
 }
