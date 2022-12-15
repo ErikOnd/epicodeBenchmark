@@ -56,7 +56,7 @@ function passedOrFailed() {
     if (userScore <= 5) {
         console.log('test');
         let child1 = document.getElementsByClassName("cong-heading")[0]
-        child1.innerHTML = "<span>You didn't passed the exam</span>";
+        child1.innerHTML = "<span>You haven't passed that exam</span>";
         let child2 = document.getElementsByClassName("highlight-color")[0]
         child2.innerText = '';
         let child3 = document.getElementsByClassName("sub-info-text")[0]

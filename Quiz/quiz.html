@@ -1,35 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!--
-        QUIZ GAME!
-
-        RULES:
-        / The player must guess correctly a certain amount of questions
-        / Each correct answer gives him one point
-        / Answers could be multiple or true/false
-        / At the end of the game, the user must know his/her total score
-
-        QUESTIONS:
-        / You can get them from this URL ( http://bit.ly/strive_QUIZZ ) or you can write your own
-        / Could be multiple of boolean (true / false)
-
-        HINTS:
-        / Keep a global variable score for the user score
-        / Keep a variable questionNumber for the question the user is answering
-        / When questionNumber is bigger then the available questions, present the score
-        / Start working with the questions saved in a variable (or you can use AJAX for fetching external questions if you already know how to do it!)
-        / Start with the easier version and THEN implement the EXTRAs
-        / Please debug everything / try it on the console to be sure of what to expect from your code
-
-        EXTRA:
-        / Show if the answer provided was the wrong one or correct it after clicking
-        / Present the questions one at a time instead of having all of them displayed together
-        / Let the user select difficulty and number of questions (you can get q/a from https://opentdb.com/api.php?amount=10&category=18&difficulty=easy modifying amount and difficulty)
-    
-        /* WHEN YOU ARE FINISHED
-          Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
-        */
-    -->
 
 <head>
 
@@ -45,15 +15,17 @@
     <div class="bottom-content">
       <div class="question-block">
         <div class="timer-position">
-          <div id="app"></div>
+          <div id="app">
+          </div>
         </div>
         <div id="question-area"></div>
-      </div>
-      <input type="button" value="Next" class="next-button" id="nextButton" onclick="nextQnA()" />
-    </div>
+        <div id="bottom-part">
+          <input type="button" value="Next" class="next-button" id="nextButton" onclick="nextQnA()" />
+        </div>
 
-  </div>
-  <script src="./script.js"></script>
+
+      </div>
+      <script src="./script.js"></script>
 </body>
 
 </html>

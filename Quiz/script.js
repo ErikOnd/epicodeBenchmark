@@ -169,9 +169,14 @@ document.getElementById("app").innerHTML = `
       ></path>
     </g>
   </svg>
+  <div class="inner-timer-text">
+  <span class="small">SECONDS</span>
+  
   <span id="base-timer-label" class="base-timer__label">${formatTime(
   timeLeft
 )}</span>
+<span class="small">REMAINING</span>
+</div>
 </div>
 `;
 
@@ -206,6 +211,10 @@ function formatTime(time) {
 
   if (seconds < 10) {
     seconds = `0${seconds}`;
+  }
+
+  if (seconds < 60) {
+    return seconds;
   }
 
   return `${minutes}:${seconds}`;
@@ -321,6 +330,16 @@ function storeAnswers() {
     userScore++;
   }
 }
+let counter = 1;
+let questionCounter = document.createElement('p')
+
+function showCurrentQuestion() {
+  let parentDiv = document.getElementById('bottom-part')
+  parentDiv.appendChild(questionCounter)
+  questionCounter.innerHTML = `<p style="font-size:25px">QUESTION ${counter}  <span style="color:#d20094">/ 10<span</p>`
+  counter++;
+}
+showCurrentQuestion()
 
 function nextQnA() {
   if (typeof questions[currentQuestion + 1] === "undefined") {
@@ -340,8 +359,18 @@ function nextQnA() {
     deleteQnA();
     displayQnA();
     startTimer();
+    showCurrentQuestion()
   }
 }
+
+
+
+
+
+
+
+
+
 
 // function unselectSelected ()
 // {
