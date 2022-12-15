@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
-  font-family: "Inter", sans-serif; /* for descriptions */
+  font-family: "Inter", sans-serif;
+  /* for descriptions */
   color: #e7e7eb;
   background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;
@@ -19,12 +22,15 @@ body {
   width: 100%;
   margin-inline: auto;
 }
+
 #epicode-upper-logo-container {
   padding-top: 3em;
 }
+
 img {
   height: 40px;
 }
+
 .main {
   padding-left: 2em;
   padding-right: 2em;
