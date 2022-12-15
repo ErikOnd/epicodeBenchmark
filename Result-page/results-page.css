@@ -11,8 +11,13 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
 }
-
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
 .container {
   max-width: 1320px;
   padding-inline: 3em;
@@ -136,31 +141,28 @@ img {
   font-size: 14px;
   letter-spacing: 0;
 }
-
 .rate-btn {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  border: none;
   text-align: center;
-  border: 2px solid white;
-  background-color: transparent;
-  color: white;
+  background-color: #c2128d;
+  color: #0b113c;
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 700;
   line-height: 22px;
   padding: 20px 10px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  vertical-align: middle;
   width: 230px;
-  transition: all 0.4s linear;
+  transition: all 0.35s linear;
   cursor: pointer;
 }
 
 .rate-btn:hover {
-  background: linear-gradient(
-    120deg,
-    rgba(210, 0, 148, 100%) 0%,
-    rgba(144, 0, 128, 100%) 100%
-  );
+  background-color: #00ffff;
+  color: #0b113c;
+  box-shadow: -1px 1px 50px rgba(0, 255, 255, 0.8);
 }
 
 /* ___________________________________ chart css___________________________________ */
