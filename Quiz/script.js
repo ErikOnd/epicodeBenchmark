@@ -329,14 +329,18 @@ function nextQnA() {
     };
   }
 
-
-  clearInterval(timerInterval);
-  timePassed = -1;
-  localStorage.setItem("userscore", userScore);
-  storeAnswers();
-  deleteQnA();
-  displayQnA();
-  startTimer();
+  if (currentQuestion === questions.length) {
+    location.replace("../result-page/results-page.html")
+  }
+  else {
+    clearInterval(timerInterval);
+    timePassed = -1;
+    localStorage.setItem("userscore", userScore);
+    storeAnswers();
+    deleteQnA();
+    displayQnA();
+    startTimer();
+  }
 }
 
 // function unselectSelected ()
