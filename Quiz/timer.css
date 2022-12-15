@@ -1,14 +1,7 @@
-body {
-    font-family: sans-serif;
-    display: grid;
-    height: 100vh;
-    place-items: center;
-}
-
 .base-timer {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 120px;
+    height: 120px;
 }
 
 .base-timer__svg {
@@ -49,11 +42,12 @@ body {
 
 .base-timer__label {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 120px;
+    height: 120px;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 30px;
+    opacity: 0.8;
 }
