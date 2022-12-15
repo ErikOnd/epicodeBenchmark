@@ -188,7 +188,6 @@ function startTimer() {
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
-    console.log(timePassed, timeLeft);
     document.getElementById("base-timer-label").innerHTML = formatTime(
       timeLeft
     );
@@ -214,13 +213,25 @@ function formatTime(time) {
 
 function setRemainingPathColor(timeLeft) {
   const { alert, warning, info } = COLOR_CODES;
-  if (timeLeft <= alert.threshold) {
+  if (timeLeft > warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(alert.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(info.color);
+  }
+  else if (timeLeft <= alert.threshold) {
     document
       .getElementById("base-timer-path-remaining")
       .classList.remove(warning.color);
     document
       .getElementById("base-timer-path-remaining")
       .classList.add(alert.color);
+
   } else if (timeLeft <= warning.threshold) {
     document
       .getElementById("base-timer-path-remaining")
