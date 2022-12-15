@@ -147,12 +147,13 @@ function displayQnA() {
 
   let createdQuestion = document.createElement("div");
   createdQuestion.innerHTML = questions[currentQuestion].question;
-  newQuestion.appendChild(createdQuestion);
 
+  newQuestion.appendChild(createdQuestion);
+  createdQuestion.classList.add("question");
   for (let i = 0; i < allAnswers[currentQuestion].length; i++) {
     let createdAnswers = document.createElement("div");
     createdAnswers.innerHTML = allAnswers[currentQuestion][i];
-    createdAnswers.classList.add("new-question");
+    createdAnswers.classList.add("options");
     createdAnswers.addEventListener("click", function (event) {
       let previouslySelectedOption = document.querySelector(".selected");
       if (previouslySelectedOption !== null) {

@@ -11,6 +11,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: 100%;
+  height: 100vh;
 }
 
 .container {
@@ -25,20 +26,54 @@ body {
 img {
   height: 40px;
 }
-.main {
-  padding-left: 2em;
-  padding-right: 2em;
+.question-block {
+  width: 800px;
+  margin-inline: auto;
+  margin-top: 10em;
+  text-align: center;
 }
-
-.selected {
-  background-color: black;
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.question {
+  font-family: "Outfit", sans-serif;
+  font-size: 50px;
+  line-height: 55px;
+  margin-inline: auto;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0.5em;
 }
 
 .next-button {
   text-align: center;
-  margin-left: 50%;
-  margin-right: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 15px 10px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
+  vertical-align: middle;
+  width: 180px;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background: linear-gradient(
+    120deg,
+    rgba(210, 0, 148, 100%) 0%,
+    rgba(144, 0, 128, 100%) 100%
+  );
 }
 
 .main-area {
@@ -48,13 +83,36 @@ img {
   align-items: center;
 }
 
-.new-question {
-  border: solid 3px;
+.options {
+  font-size: 20px;
+  /* line-height: 60px; */
+  width: 46%;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-top: 10px;
   margin-right: 15px;
   margin-bottom: 10px;
   margin-left: 15px;
-  padding: 10px 10px 10px 10px;
+  background-color: rgb(255 255 255/0.95);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(8px);
+  box-shadow: 3px 4px 2px rgba(255, 255, 255, 0.6) inset;
+  cursor: pointer;
+}
+
+.selected {
+  background: linear-gradient(
+    180deg,
+    rgba(210, 0, 148, 100%) 0%,
+    rgba(144, 0, 128, 100%) 100%
+  );
 }
 
 .disappear {
