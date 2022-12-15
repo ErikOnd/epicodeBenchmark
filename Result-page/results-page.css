@@ -1,24 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  /* font-family: "Outfit", sans-serif; */
+  font-family: "Inter", sans-serif; /* for descriptions */
+  color: #e7e7eb;
   background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
-  background-position: 50%;
+  background-position: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  padding-inline: 3em;
+  width: 100%;
+  margin-inline: auto;
+}
+
+#epicode-upper-logo-container {
+  padding-top: 3em;
+}
+
+img {
+  height: 40px;
 }
 .text-center {
   text-align: center;
 }
+
 .text-align-right {
   text-align: right;
 }
+
 .main-layout {
   color: white;
   font-size: 1.15em;
@@ -26,29 +42,21 @@ body {
   letter-spacing: 0.05em;
   line-height: 1.4;
 }
-.container {
-  max-width: 1320px;
-  padding-inline: 12px;
-  width: 100%;
-  margin-inline: auto;
-}
-.navbar {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-.logo {
-  height: 40px;
-  vertical-align: middle;
-}
+
 .main {
+  padding-left: 2em;
+  padding-right: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .result-wrapper {
+  margin-top: 10px;
   width: 100%;
 }
+
 .heading-2 {
   font-size: 60px;
   line-height: 60px;
@@ -57,6 +65,7 @@ body {
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
+
 .heading-3 {
   font-size: 22px;
   font-weight: 400;
@@ -64,12 +73,14 @@ body {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
+
 .graph-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 40px;
 }
+
 .corr-wrong-heading {
   font-size: 50px;
   line-height: 60px;
@@ -78,6 +89,7 @@ body {
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
+
 .per-heading {
   font-size: 50px;
   line-height: 60px;
@@ -86,14 +98,17 @@ body {
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
+
 .sub-text {
   line-height: 28px;
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .canvas-block {
   max-width: 100%;
 }
+
 .about-result-info {
   display: flex;
   flex-direction: column;
@@ -102,11 +117,13 @@ body {
   width: 200px;
   text-align: center;
 }
+
 .cong-heading {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0;
 }
+
 .highlight-color {
   font-size: 18px;
   font-weight: 700;
@@ -114,10 +131,12 @@ body {
   letter-spacing: 0;
   margin-bottom: 20px;
 }
+
 .sub-info-text {
   font-size: 14px;
   letter-spacing: 0;
 }
+
 .rate-btn {
   text-align: center;
   border: 2px solid white;
@@ -135,6 +154,7 @@ body {
   transition: all 0.4s linear;
   cursor: pointer;
 }
+
 .rate-btn:hover {
   background: linear-gradient(
     120deg,
@@ -142,6 +162,7 @@ body {
     rgba(144, 0, 128, 100%) 100%
   );
 }
+
 /* ___________________________________ chart css___________________________________ */
 @property --p {
   syntax: "<number>";
@@ -163,12 +184,14 @@ body {
   place-content: center;
   font-size: 25px;
 }
+
 .pie:before,
 .pie:after {
   content: "";
   position: absolute;
   border-radius: 50%;
 }
+
 .pie:before {
   inset: 0;
   background: radial-gradient(farthest-side, var(--c) 98%, #00ffff) top/var(--b)
@@ -185,21 +208,26 @@ body {
     #000 calc(100% - var(--b))
   );
 }
+
 .pie:after {
   inset: calc(50% - var(--b) / 2);
   background: var(--c);
   transform: rotate(calc(var(--p) * 3.6deg))
     translateY(calc(50% - var(--w) / 2));
 }
+
 .animate {
   animation: p 1s 0.5s both;
 }
+
 .no-round:before {
   background-size: 0 0, auto;
 }
+
 .no-round:after {
   content: none;
 }
+
 @keyframes p {
   from {
     --p: 0;

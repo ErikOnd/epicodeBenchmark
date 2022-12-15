@@ -65,11 +65,7 @@ const questions = [
     question:
       "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
-    incorrect_answers: [
-      "Ice Cream Sandwich",
-      "Jelly Bean",
-      "Marshmallow",
-    ],
+    incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
   {
     category: "Science: Computers",
@@ -99,8 +95,8 @@ const questions = [
 ];
 
 window.onload = function () {
-  shuffleAnserts()
-  displayQnA()
+  shuffleAnserts();
+  displayQnA();
   // HINTS
   // IF YOU ARE DISPLAYING ALL THE QUESTIONS AT ONCE:
   // For each question, create a container for wrapping it; then create a radio button
@@ -118,18 +114,15 @@ window.onload = function () {
 // If you are presenting all the questions together, just take all the radio buttons and check if the selected answer === correct_answer
 // If you are presenting one question at a time, just add one point or not to the user score if the selected answer === correct_answer
 
-
-
 let allAnswers = [];
 
 function getAllAnswers() {
   for (i = 0; i < questions.length; i++) {
-    allAnswers.push(questions[i].incorrect_answers)
-    allAnswers[i].push(questions[i].correct_answer)
+    allAnswers.push(questions[i].incorrect_answers);
+    allAnswers[i].push(questions[i].correct_answer);
   }
 }
-getAllAnswers()
-
+getAllAnswers();
 
 function shuffleAnserts() {
   for (let singleArr of allAnswers) {
@@ -139,38 +132,43 @@ function shuffleAnserts() {
     while (--i > 0) {
       randomNumber = Math.floor(Math.random() * (i + 1));
       temp = singleArr[randomNumber];
-      singleArr[randomNumber] = singleArr[i]
+      singleArr[randomNumber] = singleArr[i];
       singleArr[i] = temp;
     }
   }
 }
 
-
 let currentQuestion = 0;
 
 function displayQnA() {
-  let areaForNewQuestion = document.getElementById("question-area")
-  let newQuestion = document.createElement("div")
-  areaForNewQuestion.appendChild(newQuestion)
+  let areaForNewQuestion = document.getElementById("question-area");
+  let newQuestion = document.createElement("div");
+  areaForNewQuestion.appendChild(newQuestion);
 
   let createdQuestion = document.createElement("div");
-  createdQuestion.innerHTML = questions[currentQuestion].question
-  newQuestion.appendChild(createdQuestion)
+  createdQuestion.innerHTML = questions[currentQuestion].question;
+  newQuestion.appendChild(createdQuestion);
 
   for (let i = 0; i < allAnswers[currentQuestion].length; i++) {
-    let createdAnswers = document.createElement("div")
-    createdAnswers.innerHTML = allAnswers[currentQuestion][i]
-    createdAnswers.classList.add("new-question")
-    createdAnswers.addEventListener('click', function (event) {
-      event.target.classList.toggle("selected")
-    })
-    newQuestion.appendChild(createdAnswers)
+    let createdAnswers = document.createElement("div");
+    createdAnswers.innerHTML = allAnswers[currentQuestion][i];
+    createdAnswers.classList.add("new-question");
+    createdAnswers.addEventListener("click", function (event) {
+      let previouslySelectedOption = document.querySelector(".selected");
+      if (previouslySelectedOption !== null) {
+        previouslySelectedOption.classList.remove("selected");
+      }
+      let clickedOptionNode = event.target;
+      clickedOptionNode.classList.add("selected");
+      // event.target.classList.toggle("selected");
+    });
+    newQuestion.appendChild(createdAnswers);
   }
   currentQuestion++;
 }
 
 function deleteQnA() {
-  let parent = document.getElementById("question-area")
+  let parent = document.getElementById("question-area");
   parent.innerHTML = "";
 }
 
@@ -178,27 +176,29 @@ let selectedAnswers = [];
 let userScore = 0;
 
 function storeAnswers() {
-  let userSelected = document.getElementsByClassName("selected")
-  if (userSelected.length === 1 && userSelected[0].innerText === questions[currentQuestion - 1].correct_answer) {
-
+  let userSelected = document.getElementsByClassName("selected");
+  if (
+    userSelected.length === 1 &&
+    userSelected[0].innerText === questions[currentQuestion - 1].correct_answer
+  ) {
     userScore++;
   }
-  console.log(userScore)
+  console.log(userScore);
 }
 
 function nextQnA() {
-
-  if (typeof questions[currentQuestion + 1] === 'undefined') {
+  if (typeof questions[currentQuestion + 1] === "undefined") {
     document.getElementById("nextButton").onclick = function () {
       location.href = "../result-page/results-page.html";
     };
   }
 
-  storeAnswers()
-  deleteQnA()
-  displayQnA()
-}
+  localStorage.setItem("userscore", userScore);
 
+  storeAnswers();
+  deleteQnA();
+  displayQnA();
+}
 
 // function unselectSelected ()
 // {
