@@ -27,6 +27,7 @@ body::-webkit-scrollbar {
 #main-background {
   height: 100%;
 }
+
 .container {
   max-width: 1400px;
   padding-inline: 3em;
@@ -84,6 +85,7 @@ img {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 700;
+  margin-left: 22px;
 }
 
 .heading-3 {
@@ -92,6 +94,7 @@ img {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0.5rem;
+  margin-left: 22px;
 }
 
 .graph-wrapper {
@@ -156,6 +159,7 @@ img {
   font-size: 14px;
   letter-spacing: 0;
 }
+
 .btn-wrapper {
   width: 100%;
   text-align: center;
@@ -177,6 +181,7 @@ img {
   width: 230px;
   transition: all 0.35s linear;
   cursor: pointer;
+  margin-left: 17px;
 }
 
 .rate-btn:hover {
@@ -217,26 +222,20 @@ img {
 
 .pie:before {
   inset: 0;
-  background: radial-gradient(farthest-side, var(--c) 98%, #00ffff) top/var(--b)
-      var(--b) no-repeat,
+  background: radial-gradient(farthest-side, var(--c) 98%, #00ffff) top/var(--b) var(--b) no-repeat,
     conic-gradient(var(--c) calc(var(--p) * 1%), #9d1d8f 0);
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    #0000 calc(99% - var(--b)),
-    #000 calc(100% - var(--b))
-  );
-  mask: radial-gradient(
-    farthest-side,
-    #0000 calc(99% - var(--b)),
-    #000 calc(100% - var(--b))
-  );
+  -webkit-mask: radial-gradient(farthest-side,
+      #0000 calc(99% - var(--b)),
+      #000 calc(100% - var(--b)));
+  mask: radial-gradient(farthest-side,
+      #0000 calc(99% - var(--b)),
+      #000 calc(100% - var(--b)));
 }
 
 .pie:after {
   inset: calc(50% - var(--b) / 2);
   background: var(--c);
-  transform: rotate(calc(var(--p) * 3.6deg))
-    translateY(calc(50% - var(--w) / 2));
+  transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w) / 2));
 }
 
 .animate {
