@@ -24,8 +24,11 @@ body::-webkit-scrollbar {
   /* for Chrome, Safari, and Opera */
 }
 
+#main-background {
+  height: 100%;
+}
 .container {
-  max-width: 1320px;
+  max-width: 1400px;
   padding-inline: 3em;
   width: 100%;
   margin-inline: auto;
@@ -33,6 +36,7 @@ body::-webkit-scrollbar {
 
 #epicode-upper-logo-container {
   padding-top: 3em;
+  height: 10%;
 }
 
 img {
@@ -56,6 +60,8 @@ img {
 }
 
 .main {
+  height: 90%;
+  width: 100%;
   padding-left: 2em;
   padding-right: 2em;
   display: flex;
@@ -67,6 +73,8 @@ img {
 .result-wrapper {
   margin-top: 10px;
   width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .heading-2 {
@@ -88,7 +96,7 @@ img {
 
 .graph-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 40px;
 }
@@ -148,11 +156,15 @@ img {
   font-size: 14px;
   letter-spacing: 0;
 }
+.btn-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-left: 8px;
+}
 
 .rate-btn {
   margin-top: 2em;
   margin-bottom: 2em;
-  margin-left: 0.7em;
   border: none;
   text-align: center;
   background-color: #00ffff;
